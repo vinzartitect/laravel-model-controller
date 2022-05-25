@@ -12,6 +12,21 @@
 
     <h2 class="text-primary">Home</h2>
 
+    @forelse ($movies as $movie)
+    <div>
+        <div class="col card">
+            <div class="card-body">
+                <h5 class="card-title"> {{ $movie -> title  }}</h5>
+
+            </div>
+        </div>
+    </div>        
+    @empty
+
+    <p> tabella vuota </p>
+        
+    @endforelse
+
     {{-- import javascript --}}
     <script src=" {{ asset('js/app.js')  }} "></script>
     
